@@ -4,81 +4,86 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 17% 98%; /* Light gray background from #F8F9FA */
+    --foreground: 210 10% 15%; /* Dark gray text from #212529 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 210 17% 98%; /* Same as background for minimalistic card */
+    --card-foreground: 210 10% 15%; /* Same as foreground */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 17% 98%; /* Consistent popover background */
+    --popover-foreground: 210 10% 15%; /* Consistent popover text */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 211 100% 50%; /* Trustworthy blue from #007bff */
+    --primary-foreground: 210 40% 98%; /* White text for good contrast on primary */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 20% 90%; /* Neutral light gray for secondary elements */
+    --secondary-foreground: 208 7% 46%; /* Muted gray text from #6c757d */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 20% 90%; /* Consistent muted background */
+    --muted-foreground: 208 7% 46%; /* Consistent muted text from #6c757d */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 211 90% 60%; /* Slightly brighter/desaturated blue for accent */
+    --accent-foreground: 210 40% 98%; /* White text on accent */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%; /* Existing red for errors */
+    --destructive-foreground: 210 40% 98%; /* White text on destructive */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --success: 120 60% 45%; /* Green for success messages */
+    --success-foreground: 120 60% 95%; /* Light text on success green */
 
-    --radius: 0.5rem;
+    --border: 210 20% 85%; /* Subtle light gray border */
+    --input: 210 20% 85%; /* Subtle light gray input border */
+    --ring: 211 100% 50%; /* Primary blue for focus ring */
 
+    --radius: 0.5rem; /* 8px, fits 4-8px soft rounding spec */
+
+    /* Font definition */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    /* Sidebar variables remain unchanged as per current scope */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 210 10% 15%;
+    --foreground: 210 17% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 10% 20%;
+    --card-foreground: 210 17% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 10% 15%;
+    --popover-foreground: 210 17% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 211 100% 60%; /* Brighter blue for dark mode */
+    --primary-foreground: 210 10% 15%; /* Dark text on bright blue */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 10% 25%;
+    --secondary-foreground: 208 7% 60%; /* Lighter gray for dark secondary text */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 10% 25%;
+    --muted-foreground: 208 7% 50%; /* Lighter gray for dark muted text */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 211 90% 70%; /* Brighter accent for dark mode */
+    --accent-foreground: 210 10% 15%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --success: 120 60% 75%; /* Brighter success green for dark mode */
+    --success-foreground: 120 60% 15%; /* Dark text on bright success green */
+
+    --border: 210 10% 30%;
+    --input: 210 10% 30%;
+    --ring: 211 100% 60%; /* Brighter ring for dark mode */
+
+    /* Sidebar variables remain unchanged as per current scope */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -96,6 +101,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans; /* Apply new font stack */
   }
 }
